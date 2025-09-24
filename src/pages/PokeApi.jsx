@@ -22,13 +22,15 @@ export function PokoPage() {
   }, [count]); // la dependencia es un estado en este caso count y tambine podemos agregar mas estados a la dependencia
 
   // debemos evitar el uso de useEffect sin el arreglo para que no se ejecute siempre que hay un cambio de estado
-  useEffect(() => {
-    console.log("useEffect sin arreglo []");
 
-    /* si quiere que algo e renderice cada que se actualice el componente hazlo afuera de un useEffect */
-    /* ejemplo */
-    console.log("render");
-  });
+  /*  useEffect(() => {
+    console.log("useEffect sin arreglo []");
+  }); */
+
+  /* si quiere que algo e renderice cada que se actualice el componente hazlo afuera de un useEffect */
+  /* ejemplo */
+  console.log("render");
+
   return (
     <div>
       <PokeIndex />
