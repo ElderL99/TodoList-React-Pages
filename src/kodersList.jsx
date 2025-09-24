@@ -39,6 +39,10 @@ export function KodersList() {
             </label>
             <input
               type="text"
+              className={clsx("border p-1", {
+                "border-red-500": errors.firstName,
+                "border-gray-300": !errors.firstName,
+              })}
               {...register("firstName", {
                 required: {
                   value: true,
@@ -66,6 +70,10 @@ export function KodersList() {
             </label>
             <input
               type="text"
+              className={clsx("border p-1", {
+                "border-red-500": errors.lastName,
+                "border-gray-300": !errors.lastName,
+              })}
               {...register("lastName", {
                 required: {
                   value: true,
@@ -93,6 +101,10 @@ export function KodersList() {
             </label>
             <input
               type="text"
+              className={clsx("border p-1", {
+                "border-red-500": errors.github,
+                "border-gray-300": !errors.github,
+              })}
               {...register("github", {
                 required: {
                   value: true,
@@ -122,6 +134,10 @@ export function KodersList() {
             </label>
             <input
               type="text"
+              className={clsx("border p-1", {
+                "border-red-500": errors.image,
+                "border-gray-300": !errors.image,
+              })}
               {...register("image", {
                 required: {
                   value: true,
