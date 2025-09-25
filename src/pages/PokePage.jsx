@@ -1,23 +1,27 @@
 import { useState, useEffect } from "react";
 import Pokemon from "../components/Pokemon.jsx";
+import { GetPokemonList } from "../api/apiPokemon.js";
 
 export function PokePage() {
   const [pokemons, setPokemons] = useState([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=201")
-      .then((response) => response.json())
-      .then((jsonResponse) => setPokemons(jsonResponse.results))
+    GetPokemonList(200)
+      .then((pokemonListResponse) => setPokemons(pokemonListResponse))
       .catch((error) => {
         console.error(`Fetch pokemon error ${error}`);
       });
   }, []);
 
+  console.log("soy el main de pokeapi");
+
   return (
-    <div className="">
-      <header className="">este es el header</header>
-      <section>
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 p-4 gap-4">
+    <div className="min-h-screen bg-gradient-to-br from-red-100 to-yellow-100">
+      <section className="p-6">
+        <h2 className="text-2xl font-bold text-center mb-6 text-[#ef5350]">
+          Pokémon List
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
           {pokemons.map((pokemon) => (
             <Pokemon key={pokemon.name} name={pokemon.name} />
           ))}
