@@ -12,7 +12,17 @@ import PokemonDetail from "./pages/PokemonDetail.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <PokePage />,
+    element: (
+      <div className="bg-black text-red-500  w-screen h-screen">
+        <div className="flex justify-center items-center h-screen ">
+          <a href="/pokemon" className="hover:translate-x-96">
+            <button className="border  border-blue-500 rounded-xl p-4 ">
+              Go pokeDex
+            </button>
+          </a>
+        </div>
+      </div>
+    ),
   },
   {
     path: "/pokemon",
