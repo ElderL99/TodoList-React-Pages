@@ -12,7 +12,7 @@ import PokemonDetail from "./pages/PokemonDetail.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <HomePage />,
+    element: <PokePage />,
   },
   {
     path: "/pokemon",
