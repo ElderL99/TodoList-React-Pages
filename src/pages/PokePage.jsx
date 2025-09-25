@@ -7,7 +7,7 @@ export function PokePage() {
   const [finePokemon, setFinePokemon] = useState("");
 
   useEffect(() => {
-    GetPokemonList(500)
+    GetPokemonList(150)
       .then((pokemonListResponse) => setPokemons(pokemonListResponse))
       .catch((error) => {
         console.error(`Fetch pokemon error ${error}`);
