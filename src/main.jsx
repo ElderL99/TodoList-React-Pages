@@ -13,7 +13,7 @@ const router = createBrowserRouter([
       <div className="bg-black text-red-500 w-screen h-screen">
         <div className="flex justify-center items-center h-screen">
           <Link to="/pokemon">
-            <button className="border border-blue-500 rounded-xl p-4 hover:translate-x-2 transition-transform">
+            <button className="border border-blue-500 rounded-xl p-4 hover:border hover:border-yellow-500">
               Go PokeDex
             </button>
           </Link>
