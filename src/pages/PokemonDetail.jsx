@@ -14,7 +14,7 @@ export default function PokemonDetail() {
       .catch((error) => {
         console.error(`[get pokemon by name]: ${error}`);
       });
-  }, []);
+  }, [name]);
 
   /* peticion para las formas  */
 
