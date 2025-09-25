@@ -1,10 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Link } from "react-router-dom";
-import "./index.css";
-import HomePage from "./pages/HomePage.jsx";
 import { PokePage } from "./pages/PokePage.jsx";
 import PokemonDetail from "./pages/PokemonDetail.jsx";
+import "./index.css";
 
 const router = createBrowserRouter([
   {

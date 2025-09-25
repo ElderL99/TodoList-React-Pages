@@ -73,7 +73,10 @@ export default function PokemonDetail() {
 
   return (
     <main className="grid grid-cols-1 md:grid-cols-[1fr_2fr] lg:grid-cols-2 place-items-center min-h-screen px-4 gap-8 lg:gap-0 bg-gradient-to-br from-blue-100 to-yellow-100">
-      <Link href={`/pokemon`} className="absolute left-4 top-4">
+      <Link
+        to="https://todo-list-react-pages.vercel.app/pokemon"
+        className="absolute left-4 top-4"
+      >
         <button className="text-2xl p-3 rounded-full bg-white shadow-lg hover:bg-gray-100 transition-all">
           🔙
         </button>
